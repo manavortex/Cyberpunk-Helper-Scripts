@@ -101,11 +101,11 @@ set "exe_path=%CYBERPUNKDIR%\bin\x64\Cyberpunk2077.exe"
 for /f "usebackq delims=" %%i in (`powershell -Command "$file = Get-Item '%exe_path%'; $version = [string]$file.VersionInfo.FileMajorPart + '.' + [string]$file.VersionInfo.FileMinorPart + '.' + [string]$file.VersionInfo.FileBuildPart + '.' + [string]$file.VersionInfo.FilePrivatePart; Write-Output $version"`) do ( set "version=%%i" )
 
 :: update executable version here
-set LATESTVERSION=3.0.78.41888
+set LATESTVERSION=3.0.78.57301
 
 :: if not the current game version, yell at the user and deploy R.A.B.I.D.S.
 if not "!version!"=="%LATESTVERSION%" (
-  echo Please update the game before proceeding. The most recent game version is 2.2 with the executable version %LATESTVERSION%
+  echo Please update the game before proceeding. The most recent game version is 2.21 with the executable version %LATESTVERSION%
   echo.
   echo Deploying Roving Autonomous Bartmoss Interface Drones....
   FOR /L %%S IN (10, -1, 1) DO (
