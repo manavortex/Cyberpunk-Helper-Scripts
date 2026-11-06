@@ -51,7 +51,7 @@ REM visualc redistributable version
 set VC_VERSION=14.42.34433.0
 
 REM game version (of executable)
-set LATESTVERSION=3.0.80.51928
+set LATESTVERSION=3.0.88.46235
 
 REM ====================================================================
 
@@ -114,7 +114,7 @@ for /f "usebackq delims=" %%i in (`powershell -Command "$file = Get-Item '!exe_p
 
 REM if not the current game version, yell at the user and deploy R.A.B.I.D.S.
 if not "!version!"=="!LATESTVERSION!" (
-  echo Please update the game before proceeding. The most recent game version is 2.31 with the executable version !LATESTVERSION!
+  echo Please update the game before proceeding. The most recent game version is 2.5 with the executable version !LATESTVERSION!
   echo.
   echo Deploying Roving Autonomous Bartmoss Interface Drones....
   FOR /L %%S IN (10, -1, 1) DO (
